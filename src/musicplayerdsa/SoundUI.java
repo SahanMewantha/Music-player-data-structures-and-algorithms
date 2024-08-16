@@ -103,10 +103,10 @@ public class SoundUI extends javax.swing.JFrame {
             SettingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SettingLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Playstat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Playstat, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(SongName, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(137, 137, 137)
                 .addComponent(jLabel6)
                 .addGap(18, 18, 18)
                 .addComponent(previousButton)
@@ -284,7 +284,7 @@ public class SoundUI extends javax.swing.JFrame {
         SearchingSinger.setFont(new java.awt.Font("Segoe UI Symbol", 1, 12)); // NOI18N
         SearchingSinger.setIcon(new javax.swing.ImageIcon("C:\\Users\\SAHAN\\Documents\\NetBeansProjects\\Music-player-data-structures-and-algorithms\\Icon\\370082_find_search_zoom_magnifier_view_icon.png")); // NOI18N
         SearchingSinger.setText("Search");
-        SearchingSinger.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.white, null, java.awt.Color.white));
+        SearchingSinger.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\SAHAN\\Documents\\NetBeansProjects\\MusicPlayerDSA\\Icon\\8680283_play_list_fill_icon.png")); // NOI18N
 
