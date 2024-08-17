@@ -87,7 +87,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Playstat" pref="105" max="32767" attributes="0"/>
+                      <Component id="Playstat" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="SongName" min="-2" pref="256" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
@@ -95,7 +95,7 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="previousButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <Component id="PlayingButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="nextButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -117,7 +117,7 @@
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                   <Component id="jLabel4" alignment="0" max="32767" attributes="0"/>
                                   <Component id="previousButton" alignment="1" pref="58" max="32767" attributes="0"/>
-                                  <Component id="jLabel1" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="PlayingButton" alignment="1" max="32767" attributes="0"/>
                                   <Component id="nextButton" alignment="1" max="32767" attributes="0"/>
                                   <Component id="jLabel6" alignment="0" max="32767" attributes="0"/>
                                   <Group type="103" alignment="0" groupAlignment="3" attributes="0">
@@ -140,7 +140,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel1">
+            <Component class="javax.swing.JLabel" name="PlayingButton">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -149,6 +149,9 @@
                   <Image iconType="3" name="/musicplayerdsa/287674_play_store_icon.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PlayingButtonMouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="nextButton">
               <Properties>
@@ -226,14 +229,14 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="1017" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                      <Component id="jPanel2" pref="412" max="32767" attributes="0"/>
+                      <Component id="jPanel2" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -423,7 +426,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton7" alignment="0" pref="193" max="32767" attributes="0"/>
+                      <Component id="Adding" alignment="0" pref="193" max="32767" attributes="0"/>
                       <Component id="Deleting" alignment="0" max="32767" attributes="0"/>
                       <Component id="Beginning" alignment="0" max="32767" attributes="0"/>
                       <Component id="EndButton" alignment="0" max="32767" attributes="0"/>
@@ -435,7 +438,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="201" max="-2" attributes="0"/>
-                          <Component id="jButton7" min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="Adding" min="-2" pref="34" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="Deleting" min="-2" pref="34" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
@@ -452,7 +455,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="jButton7">
+                <Component class="javax.swing.JButton" name="Adding">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI Symbol" size="12" style="1"/>
@@ -462,6 +465,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Add  Song &gt;&gt;"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AddingActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="Deleting">
                   <Properties>

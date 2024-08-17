@@ -15,14 +15,14 @@ public class SongData {
     static int cntPlay=0;
     
     public SongData() {
-        songList[0] = new Song("Akon - Lonely.mp3", "Akon");
+        songList[0] = new Song("Bye Bye Bye (Official Video from Deadpool and Wolverine)", "NSYNC");
         songList[1] = new Song("Eminem - Lose Yourself [HD]_2.mp3", "Eminem");
-        songList[2] = new Song("Asfour - Aida el Ayoubi عصـفور - عايدة الأيوبي.mp3", "Aida");
-        songList[3] = new Song("Akher Zapheer - Akherto Lahen Hazeenاخر زفير - اخرتو لحن حزين.mp3", "Akher Zapheer");
-        songList[4] = new Song("Eqrar.mp3", "Mohamed Moneer");
+        songList[2] = new Song("Love Is Gone ft. Dylan Matthew", "SLANDER");
+        songList[3] = new Song("See You Again ft. Charlie Puth", "Wiz Khalifa");
+        songList[4] = new Song("drivers license", "Olivia Rodrigo");
         songList[5] = new Song("George Michael - Careless Whisper (Official Video)_2.mp3", "George Micheal");
         songList[6] = new Song("Sway - Dean Martin_2.mp3", "Dean Martin");
-        songList[7] = new Song("اي كلام.mp3", "Hamza");
+        songList[7] = new Song("On My Way", "Alan Walker");
         songList[8] = new Song("14.Ya_Hamam.mp3", "Mohamed Moneer");
         songList[9] = new Song("Cairokee - Kol haga Beta'ady - كايروكي -  كل حاجة بتعدى.mp3", "Kairokee");
         songList[10]=new Song("Dura akase","Charitha");
