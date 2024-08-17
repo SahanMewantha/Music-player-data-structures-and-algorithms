@@ -33,7 +33,7 @@ public class SongData {
     }
     
     public static int getIndex(String song){
-        for(int i=0; i<10; i++){
+        for(int i=0; i<11; i++){
             if(song.equals(songNames[i])){
                 return i;
             }
@@ -143,7 +143,7 @@ public class SongData {
      
      public static String searchSongName(String text){
          
-         for(int i=0; i<10; i++){
+         for(int i=0; i<11; i++){
              if( text.equals(songNames[i])){
                  addSong(text);
                  return text+ " is added succesfully to list";
@@ -154,7 +154,7 @@ public class SongData {
      }
      public static String searchSongSinger(String text){
          
-         for(int i=0; i<10; i++){
+         for(int i=0; i<11; i++){
              if( text.equals(songList[i].singerName)){
                  addSong(songNames[i]);
                  return songNames[i] + " by "+ text + " is added succesfully to list";

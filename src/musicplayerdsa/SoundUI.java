@@ -23,6 +23,7 @@ public class SoundUI extends javax.swing.JFrame {
         this.setTitle("Sound Player");
         initComponents();
         
+        
         AllSongs.setModel(new DefaultComboBoxModel<>(SongData.songNames));
     }
     
@@ -101,8 +102,18 @@ public class SoundUI extends javax.swing.JFrame {
         });
 
         nextButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/musicplayerdsa/9035086_play_forward_circle_icon.png"))); // NOI18N
+        nextButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nextButtonMouseClicked(evt);
+            }
+        });
 
         previousButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/musicplayerdsa/9035157_play_back_circle_icon.png"))); // NOI18N
+        previousButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                previousButtonMouseClicked(evt);
+            }
+        });
 
         jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\SAHAN\\Documents\\NetBeansProjects\\MusicPlayerDSA\\Icon\\1288808_sound_volume_multimedia_media control_icon.png")); // NOI18N
 
@@ -179,6 +190,11 @@ public class SoundUI extends javax.swing.JFrame {
         SearchingName.setIcon(new javax.swing.ImageIcon("C:\\Users\\SAHAN\\Documents\\NetBeansProjects\\Music-player-data-structures-and-algorithms\\Icon\\370082_find_search_zoom_magnifier_view_icon.png")); // NOI18N
         SearchingName.setText("Search");
         SearchingName.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.white, java.awt.Color.white, null));
+        SearchingName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SearchingNameActionPerformed(evt);
+            }
+        });
 
         SnameText.setBackground(new java.awt.Color(39, 37, 37));
         SnameText.setFont(new java.awt.Font("Dialog", 3, 12)); // NOI18N
@@ -250,18 +266,43 @@ public class SoundUI extends javax.swing.JFrame {
         Deleting.setFont(new java.awt.Font("Segoe UI Symbol", 1, 12)); // NOI18N
         Deleting.setIcon(new javax.swing.ImageIcon("C:\\Users\\SAHAN\\Documents\\NetBeansProjects\\MusicPlayerDSA\\Icon\\216170_delete_icon.png")); // NOI18N
         Deleting.setText("Delete song");
+        Deleting.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeletingActionPerformed(evt);
+            }
+        });
 
         Beginning.setFont(new java.awt.Font("Segoe UI Symbol", 1, 12)); // NOI18N
         Beginning.setText("Beginning");
+        Beginning.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BeginningActionPerformed(evt);
+            }
+        });
 
         EndButton.setFont(new java.awt.Font("Segoe UI Symbol", 1, 12)); // NOI18N
         EndButton.setText("End");
+        EndButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EndButtonActionPerformed(evt);
+            }
+        });
 
         MoveUpButton.setFont(new java.awt.Font("Segoe UI Symbol", 1, 12)); // NOI18N
         MoveUpButton.setText("Move Up");
+        MoveUpButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MoveUpButtonActionPerformed(evt);
+            }
+        });
 
         MoveDownButton.setFont(new java.awt.Font("Segoe UI Symbol", 1, 12)); // NOI18N
         MoveDownButton.setText("Move Down");
+        MoveDownButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MoveDownButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -312,6 +353,11 @@ public class SoundUI extends javax.swing.JFrame {
         SearchingSinger.setIcon(new javax.swing.ImageIcon("C:\\Users\\SAHAN\\Documents\\NetBeansProjects\\Music-player-data-structures-and-algorithms\\Icon\\370082_find_search_zoom_magnifier_view_icon.png")); // NOI18N
         SearchingSinger.setText("Search");
         SearchingSinger.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        SearchingSinger.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SearchingSingerActionPerformed(evt);
+            }
+        });
 
         jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\SAHAN\\Documents\\NetBeansProjects\\MusicPlayerDSA\\Icon\\8680283_play_list_fill_icon.png")); // NOI18N
 
@@ -336,7 +382,7 @@ public class SoundUI extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabel10)
-                        .addGap(18, 18, 18)
+                        .addGap(27, 27, 27)
                         .addComponent(jLabel12)))
                 .addContainerGap())
         );
@@ -348,15 +394,11 @@ public class SoundUI extends javax.swing.JFrame {
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SsingerText, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SearchingSinger, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel12)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -438,6 +480,117 @@ public class SoundUI extends javax.swing.JFrame {
         SongData.addSong(abs);
         playlistScreen.setModel(new DefaultComboBoxModel<>(SongData.playlistName));
     }//GEN-LAST:event_AddingActionPerformed
+
+    private void nextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextButtonMouseClicked
+         int nx = songs.next();
+        
+        Playstat.setText("Playing:");
+        SongName.setText(songs.playlist[nx].fileName);
+        
+        
+        songs.playlist[nx].currentPath = Paths.get(".").toAbsolutePath().normalize().toString();
+    }//GEN-LAST:event_nextButtonMouseClicked
+
+    private void previousButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_previousButtonMouseClicked
+         int nx = songs.previous();
+        
+        Playstat.setText("Playing:");
+        SongName.setText(songs.playlist[nx].fileName);
+        
+        
+        songs.playlist[nx].currentPath = Paths.get(".").toAbsolutePath().normalize().toString();
+    }//GEN-LAST:event_previousButtonMouseClicked
+
+    private void DeletingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeletingActionPerformed
+         try{ 
+        int Dindx = playlistScreen.getSelectedIndex();
+           if(Dindx == 0 && songs.cnt == 1) {
+                Playstat.setText("Stopped:");
+                SongName.setText(" ");
+           } 
+           songs.deleteSong(Dindx);
+      playlistScreen.setModel(new DefaultComboBoxModel<>(SongData.playlistName));
+        }
+        catch(NullPointerException | ArrayIndexOutOfBoundsException e){
+            JOptionPane.showMessageDialog(null, "Playlist is empty");    
+        }
+    }//GEN-LAST:event_DeletingActionPerformed
+
+    private void BeginningActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BeginningActionPerformed
+        try{
+        int beg = songs.getBeginning();
+        
+        Playstat.setText("Playing:");
+        SongName.setText(songs.playlist[beg].fileName);
+        songs.playlist[beg].currentPath = Paths.get(".").toAbsolutePath().normalize().toString();
+        }
+        catch(NullPointerException e){
+             JOptionPane.showMessageDialog(null,"There is no songs in list");
+        }
+    }//GEN-LAST:event_BeginningActionPerformed
+
+    private void EndButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EndButtonActionPerformed
+         try{
+        int beg = songs.getEnd();
+        
+        Playstat.setText("Playing:");
+        SongName.setText(songs.playlist[beg].fileName);
+        songs.playlist[beg].currentPath = Paths.get(".").toAbsolutePath().normalize().toString();
+        }
+        catch(NullPointerException e){
+             JOptionPane.showMessageDialog(null,"There is no songs in list");
+        }
+    }//GEN-LAST:event_EndButtonActionPerformed
+
+    private void MoveUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoveUpButtonActionPerformed
+        try{
+        Playstat.setText("Stopped:");
+        SongName.setText(" ");
+        int mv = playlistScreen.getSelectedIndex();
+        songs.moveUp(mv);
+        
+      playlistScreen.setModel(new DefaultComboBoxModel<>(SongData.playlistName));
+    }
+     catch(ArrayIndexOutOfBoundsException e){
+            JOptionPane.showMessageDialog(null, "Select a song");
+        }
+     catch(NullPointerException e){
+            JOptionPane.showMessageDialog(null, "Playlist is empty");    
+        }
+    }//GEN-LAST:event_MoveUpButtonActionPerformed
+
+    private void MoveDownButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoveDownButtonActionPerformed
+        try{
+        Playstat.setText("Stopped:");
+        SongName.setText(" ");        
+        int mv = playlistScreen.getSelectedIndex();
+        songs.moveDown(mv);
+        
+      playlistScreen.setModel(new DefaultComboBoxModel<>(SongData.playlistName));
+        }
+        catch(ArrayIndexOutOfBoundsException e){
+            JOptionPane.showMessageDialog(null, "Select a song");
+        }
+        catch(NullPointerException e){
+            JOptionPane.showMessageDialog(null, "Playlist is empty");    
+        }
+    }//GEN-LAST:event_MoveDownButtonActionPerformed
+
+    private void SearchingNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchingNameActionPerformed
+        String nGet = SnameText.getText(); 
+        String NameSong = songs.searchSongName(nGet);
+         playlistScreen.setModel(new DefaultComboBoxModel<>(SongData.playlistName));
+
+            JOptionPane.showMessageDialog(null, NameSong);
+    }//GEN-LAST:event_SearchingNameActionPerformed
+
+    private void SearchingSingerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchingSingerActionPerformed
+        String nGet = SsingerText.getText(); 
+        String NameSong = songs.searchSongSinger(nGet);
+         playlistScreen.setModel(new DefaultComboBoxModel<>(SongData.playlistName));
+
+            JOptionPane.showMessageDialog(null, NameSong);
+    }//GEN-LAST:event_SearchingSingerActionPerformed
 
     /**
      * @param args the command line arguments
