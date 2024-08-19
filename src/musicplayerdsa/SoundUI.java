@@ -307,7 +307,7 @@ public class SoundUI extends javax.swing.JFrame {
 
         AddNewPlayList.setFont(new java.awt.Font("Segoe UI Symbol", 1, 12)); // NOI18N
         AddNewPlayList.setIcon(new javax.swing.ImageIcon("C:\\Users\\SAHAN\\Documents\\NetBeansProjects\\MusicPlayerDSA\\Icon\\2540589_add_add board_plus_new_icon.png")); // NOI18N
-        AddNewPlayList.setText("Add  Song >>");
+        AddNewPlayList.setText("Create New Play List");
         AddNewPlayList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AddNewPlayListActionPerformed(evt);

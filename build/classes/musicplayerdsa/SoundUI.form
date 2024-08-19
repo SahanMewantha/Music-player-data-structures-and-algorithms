@@ -547,7 +547,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="2" name="C:\Users\SAHAN\Documents\NetBeansProjects\MusicPlayerDSA\Icon\2540589_add_add board_plus_new_icon.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Add  Song &gt;&gt;"/>
+                    <Property name="text" type="java.lang.String" value="Create New Play List"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AddNewPlayListActionPerformed"/>
