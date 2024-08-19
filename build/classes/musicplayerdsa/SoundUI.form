@@ -435,18 +435,21 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="Adding" alignment="0" pref="193" max="32767" attributes="0"/>
+                      <Component id="Adding" alignment="0" pref="216" max="32767" attributes="0"/>
                       <Component id="Deleting" alignment="0" max="32767" attributes="0"/>
                       <Component id="Beginning" alignment="0" max="32767" attributes="0"/>
                       <Component id="EndButton" alignment="0" max="32767" attributes="0"/>
                       <Component id="MoveUpButton" alignment="0" max="32767" attributes="0"/>
                       <Component id="MoveDownButton" alignment="0" max="32767" attributes="0"/>
+                      <Component id="AddNewPlayList" alignment="0" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="201" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
+                          <Component id="AddNewPlayList" min="-2" pref="34" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                           <Component id="Adding" min="-2" pref="34" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="Deleting" min="-2" pref="34" max="-2" attributes="0"/>
@@ -454,7 +457,7 @@
                           <Component id="Beginning" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="EndButton" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="41" max="32767" attributes="0"/>
                           <Component id="MoveUpButton" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="MoveDownButton" min="-2" max="-2" attributes="0"/>
@@ -534,6 +537,20 @@
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MoveDownButtonActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="AddNewPlayList">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI Symbol" size="12" style="1"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="2" name="C:\Users\SAHAN\Documents\NetBeansProjects\MusicPlayerDSA\Icon\2540589_add_add board_plus_new_icon.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Add  Song &gt;&gt;"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AddNewPlayListActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>

@@ -72,6 +72,7 @@ public class SoundUI extends javax.swing.JFrame {
         EndButton = new javax.swing.JButton();
         MoveUpButton = new javax.swing.JButton();
         MoveDownButton = new javax.swing.JButton();
+        AddNewPlayList = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         AllSongs = new javax.swing.JList<>();
@@ -304,21 +305,33 @@ public class SoundUI extends javax.swing.JFrame {
             }
         });
 
+        AddNewPlayList.setFont(new java.awt.Font("Segoe UI Symbol", 1, 12)); // NOI18N
+        AddNewPlayList.setIcon(new javax.swing.ImageIcon("C:\\Users\\SAHAN\\Documents\\NetBeansProjects\\MusicPlayerDSA\\Icon\\2540589_add_add board_plus_new_icon.png")); // NOI18N
+        AddNewPlayList.setText("Add  Song >>");
+        AddNewPlayList.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddNewPlayListActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Adding, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
+            .addComponent(Adding, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
             .addComponent(Deleting, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(Beginning, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(EndButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(MoveUpButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(MoveDownButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(AddNewPlayList, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(201, 201, 201)
+                .addGap(120, 120, 120)
+                .addComponent(AddNewPlayList, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(47, 47, 47)
                 .addComponent(Adding, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Deleting, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -326,7 +339,7 @@ public class SoundUI extends javax.swing.JFrame {
                 .addComponent(Beginning)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(EndButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addComponent(MoveUpButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(MoveDownButton)
@@ -592,6 +605,11 @@ public class SoundUI extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, NameSong);
     }//GEN-LAST:event_SearchingSingerActionPerformed
 
+    private void AddNewPlayListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddNewPlayListActionPerformed
+        NewPlayList play=new NewPlayList();
+        play.show();
+    }//GEN-LAST:event_AddNewPlayListActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -629,6 +647,7 @@ public class SoundUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AddNewPlayList;
     private javax.swing.JButton Adding;
     private javax.swing.JList<String> AllSongs;
     private javax.swing.JButton Beginning;
