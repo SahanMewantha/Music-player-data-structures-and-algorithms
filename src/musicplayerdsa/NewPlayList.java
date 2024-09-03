@@ -289,8 +289,14 @@ public class NewPlayList extends javax.swing.JFrame {
     }//GEN-LAST:event_plylistValueChanged
 
     private void removeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeActionPerformed
-        dm.clear();
+        try{
+            dm.clear();
         plylist.setModel(dm);
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
+        
     }//GEN-LAST:event_removeActionPerformed
 
     /**
